@@ -1,8 +1,8 @@
 # Task 3
 seconds = ARGV[0].to_i + ARGV[1].to_i
 hours = seconds / 3600
-minutes = seconds / 60 - hours * 60
-seconds -= minutes * 60 + hours * 3600
+minutes = seconds % 3600 / 60
+seconds = seconds % 3600 % 60
 result = ""
 
 def func(number, a, b, c) 
@@ -16,8 +16,8 @@ def func(number, a, b, c)
   end
 end
 
-if hours.nonzero? 
-  result += func(hours, "час ", "часа ", "часов ")
+if hours.nonzero?
+  result += func(hours, "час ", "часа ", "часов ")  
 end
 
 if minutes.nonzero?
