@@ -1,3 +1,8 @@
 # Task 1
+str = ARGV[0].dup
 
-# Put your code here
+if str.gsub!(/\W/, '').downcase! == str.reverse
+  puts "YES"
+else 
+  puts "NO"
+end
