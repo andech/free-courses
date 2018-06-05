@@ -1,4 +1,5 @@
-var month = {"января": 0,
+'use strict'
+let month = {"января": 0,
              "февраля": 1,
              "марта": 2,
              "апреля": 3,
@@ -11,8 +12,8 @@ var month = {"января": 0,
              "ноября": 10,
              "декабря": 11};
 
-var currentDate = new Date(parseInt(process.argv[4]), month[process.argv[3]], parseInt(process.argv[2]));
-var newYearDate = new Date(currentDate.getFullYear(), 11, 31);
-var result = (newYearDate - currentDate) / 1000 / 60 / 60 / 24;
+let currentDate = new Date(parseInt(process.argv[4]), month[process.argv[3]], parseInt(process.argv[2]));
+let newYearDate = new Date(currentDate.getFullYear(), 11, 31);
+let result = (newYearDate - currentDate) / 1000 / 60 / 60 / 24;
 
 process.stdout.write(String(result));
