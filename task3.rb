@@ -7,7 +7,7 @@ result = ""
 
 def func(number, a, b, c) 
   last_digit = number % 10
-  if last_digit == 1
+  if last_digit == 1 && number != 11
     "#{number} #{a}"
   elsif last_digit > 1 && last_digit < 5 && number / 10 != 1
     "#{number} #{b}"
