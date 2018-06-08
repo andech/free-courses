@@ -1,7 +1,7 @@
 # Task 1
-str = ARGV[0].dup
+str = ARGV[0].dup.gsub!(/[^a-zA-Z0-9]/, '').downcase!
 
-if str.gsub!(/[^a-zA-Z0-9]/, '').downcase! == str.reverse
+if str == str.reverse
   puts "YES"
 else 
   puts "NO"
