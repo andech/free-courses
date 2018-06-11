@@ -1,5 +1,5 @@
 # Task 1
-str = ARGV[0].dup.gsub!(/[\W_]+/, '').downcase!
+str = ARGV[0].to_s.dup.gsub!(/[\W_]+/, '').downcase!
 
 if str == str.reverse
   puts "YES"
